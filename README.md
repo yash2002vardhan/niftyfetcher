@@ -103,3 +103,7 @@ This tool is for educational and research purposes. Always verify data accuracy 
 ## 🐛 Issues
 
 If you encounter any issues, please report them on [GitHub Issues](https://github.com/yash2002vardhan/niftyfetcher/issues).
+
+## ⚠️ Note on Rate Limits
+
+Please be mindful of the rate limits imposed by the Upstox API to avoid errors or temporary bans. While this tool includes basic safeguards (such as delays between requests), it is ultimately your responsibility to ensure you do not exceed Upstox's allowed request limits. The authors are not liable for any issues arising from rate limit violations.

@@ -15,10 +15,6 @@ def validate_file_type(file_type: str) -> str:
         raise typer.BadParameter("file_type must be one of: csv, xlsx, .csv, .xlsx")
     return file_type.lower().lstrip(".")
 
-# The issue here is that the function parameters `from_date` and `to_date` are typed as `str`, but inside the function, they are immediately overwritten by `datetime` objects after parsing. This can cause confusion and type errors, especially if the function is called elsewhere or type checking is used. Additionally, the linter errors indicate that elsewhere in the code, `from_date` and `to_date` are expected to remain as strings, but after this reassignment, they are `datetime` objects.
-
-# A better approach is to use different variable names for the parsed datetime objects, or to keep the original string variables unchanged. For example:
-
 @app.command()
 def fetch_data(
     instrument_key: str = typer.Argument(..., help="Upstox instrument key for the stock"),

@@ -1,26 +1,18 @@
 [project]
 name = "niftyfetcher"
-version = "0.1.0"
+version = "0.1.1"
 description = "📈 A CLI tool to fetch historical OHLC data for stocks using Upstox API"
-authors = [{ name = "Yashvardhan Goel", email = "yash2002goel@gmail.com" }]
+authors = [{ name = "Yashvardhan Goel", email = "yashvardhan2002@gmail.com" }]
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.8"
 keywords = ["stock", "market", "data", "trading", "upstox", "cli", "nifty", "historical"]
 classifiers = [
     "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "Intended Audience :: Financial and Insurance Industry",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
     "Topic :: Office/Business :: Financial",
-    "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
     "typer[all] >=0.9.0",

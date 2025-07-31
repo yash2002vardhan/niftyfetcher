@@ -68,11 +68,20 @@ def fetch_data(
                 return None
 
             candles_data = response_data["data"]["candles"]
-            df = pd.DataFrame(
-                [(c[0], c[1], c[2], c[3], c[4]) for c in candles_data],
-                columns=["timestamp", "open", "high", "low", "close"]
-            )
+            try:
+                df = pd.DataFrame(
+                    [(c[0], c[1], c[2], c[3], c[4], c[5]) for c in candles_data],
+                    columns=["timestamp", "open", "high", "low", "close", "volume"]
+                )
+
+            except:
+                df = pd.DataFrame(
+                    [(c[0], c[1], c[2], c[3], c[4], "NA") for c in candles_data],
+                    columns=["timestamp", "open", "high", "low", "close", "volume"]
+                )
+            
             return df
+            
         except KeyError as e:
             typer.echo(f"❌ Error parsing response data: {e}")
             typer.echo(f"Response: {response.text}")
